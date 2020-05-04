@@ -13,10 +13,7 @@ class Owner
     @@all << self
   end
   
-  def self.all
-    #binding.pry
-    @@all 
-  end
+  
   
   def say_species 
     "I am a #{species}."
@@ -29,7 +26,10 @@ end
   def dogs 
     Dog.all.select {|dog| dog.owner == self}
   end
-  
+  def self.all
+    #binding.pry
+    @@all 
+  end
   def self.count
     @all.count
   end
